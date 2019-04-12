@@ -1,4 +1,4 @@
-# SocketRocket
+# SocketRocket (Ably Fork)
 
 ![Platforms][platforms-svg]
 [![License][license-svg]][license-link]
@@ -34,18 +34,22 @@ There are a few options. Choose one, or just figure it out:
 - **[CocoaPods](https://cocoapods.org)**
 
  Add the following line to your Podfile:
+ 
  ```ruby
- pod 'SocketRocket'
+ pod 'SocketRocketAblyFork'
  ```
+ 
  Run `pod install`, and you are all set.
   
 - **[Carthage](https://github.com/carthage/carthage)**
 
  Add the following line to your Cartfile:
+ 
  ```
- github "facebook/SocketRocket"
+ github "ably-forks/SocketRocket"
  ```
- Run `carthage update`, and you should now have the latest version of `SocketRocket` in your `Carthage` folder.
+ 
+ Run `carthage update`, and you should now have the latest version of `SocketRocketAblyFork` in your `Carthage` folder.
 
 - **Using SocketRocket as a sub-project**
 

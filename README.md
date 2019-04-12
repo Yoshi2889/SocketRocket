@@ -2,11 +2,8 @@
 
 ![Platforms][platforms-svg]
 [![License][license-svg]][license-link]
-
 [![Podspec][podspec-svg]][podspec-link]
 [![Carthage Compatible][carthage-svg]](carthage-link)
-
-[![Build Status][build-status-svg]][build-status-link]
 
 A conforming WebSocket ([RFC 6455](https://tools.ietf.org/html/rfc6455>)) client library for iOS, macOS and tvOS.
 
@@ -208,10 +205,10 @@ Please read our [contributing guidelines](https://github.com/facebook/SocketRock
  [license-svg]: https://img.shields.io/badge/license-BSD-lightgrey.svg
  [license-link]: https://github.com/facebook/SocketRocket/blob/master/LICENSE
 
- [podspec-svg]: https://img.shields.io/cocoapods/v/SocketRocket.svg
- [podspec-link]: https://cocoapods.org/pods/SocketRocket
+ [podspec-svg]: https://img.shields.io/cocoapods/v/SocketRocketAblyFork.svg
+ [podspec-link]: https://cocoapods.org/pods/SocketRocketAblyFork
  
  [carthage-svg]: https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat
  [carthage-link]: https://github.com/carthage/carthage
 
- [platforms-svg]: http://img.shields.io/cocoapods/p/SocketRocket.svg?style=flat
+ [platforms-svg]: http://img.shields.io/cocoapods/p/SocketRocketAblyFork.svg?style=flat

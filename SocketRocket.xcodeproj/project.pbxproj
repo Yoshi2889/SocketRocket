@@ -323,6 +323,7 @@
 		81D6475D1D2CA6A100690609 /* SocketRocketTests-iOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "SocketRocketTests-iOS.xcconfig"; sourceTree = "<group>"; };
 		81D6478D1D2CA78800690609 /* SocketRocketAblyFork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SocketRocketAblyFork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E8A69A1D4C417A00916C7E /* TestChat-iOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "TestChat-iOS.xcconfig"; sourceTree = "<group>"; };
+		D73BF70A2260991F00579773 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F5391CBC1D2F4B4700606A81 /* SRSIMDHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRSIMDHelpers.h; sourceTree = "<group>"; };
 		F5391CBD1D2F4B4700606A81 /* SRSIMDHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRSIMDHelpers.m; sourceTree = "<group>"; };
 		F61A0DC71625F44D00365EBD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "en.lproj/Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -333,7 +334,6 @@
 		F62417F014D52F3C003CE997 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F62417F314D52F3C003CE997 /* TCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCAppDelegate.h; sourceTree = "<group>"; };
 		F62417F414D52F3C003CE997 /* TCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCAppDelegate.m; sourceTree = "<group>"; };
-		F62417F714D52F3C003CE997 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F62417F914D52F3C003CE997 /* TCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCViewController.h; sourceTree = "<group>"; };
 		F62417FA14D52F3C003CE997 /* TCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCViewController.m; sourceTree = "<group>"; };
 		F62417FF14D5300C003CE997 /* TCChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCChatCell.h; sourceTree = "<group>"; };
@@ -957,15 +957,15 @@
 			isa = PBXProject;
 			attributes = {
 				LastTestingUpgradeCheck = 0640;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 1020;
 			};
 			buildConfigurationList = F6B208271450F597009315AF /* Build configuration list for PBXProject "SocketRocket" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = F6B208221450F597009315AF;
 			productRefGroup = F6B2082E1450F597009315AF /* Products */;
@@ -1162,7 +1162,7 @@
 		F62417F614D52F3C003CE997 /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F62417F714D52F3C003CE997 /* en */,
+				D73BF70A2260991F00579773 /* Base */,
 			);
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
@@ -1212,6 +1212,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 81D6475A1D2CA6A100690609 /* SocketRocket-iOS.xcconfig */;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = SocketRocketAblyFork;
 			};
 			name = Debug;
@@ -1220,6 +1221,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 81D6475A1D2CA6A100690609 /* SocketRocket-iOS.xcconfig */;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = SocketRocketAblyFork;
 			};
 			name = Release;
@@ -1260,6 +1262,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 81D647561D2CA6A100690609 /* Debug.xcconfig */;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 			};
 			name = Debug;
 		};
@@ -1267,6 +1276,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 81D647571D2CA6A100690609 /* Release.xcconfig */;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 			};
 			name = Release;
 		};
@@ -1274,6 +1290,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 81D6475D1D2CA6A100690609 /* SocketRocketTests-iOS.xcconfig */;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Debug;
 		};
@@ -1281,6 +1298,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 81D6475D1D2CA6A100690609 /* SocketRocketTests-iOS.xcconfig */;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Release;
 		};

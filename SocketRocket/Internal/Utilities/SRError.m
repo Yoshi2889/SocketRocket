@@ -9,8 +9,6 @@
 
 #import "SRError.h"
 
-#import "SRWebSocket.h"
-
 NS_ASSUME_NONNULL_BEGIN
 
 NSError *SRErrorWithDomainCodeDescription(NSString *domain, NSInteger code, NSString *description)

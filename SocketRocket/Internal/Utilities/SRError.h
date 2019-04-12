@@ -9,6 +9,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import <SocketRocketAblyFork/SRWebSocket.h>
+
 NS_ASSUME_NONNULL_BEGIN
 
 extern NSError *SRErrorWithDomainCodeDescription(NSString *domain, NSInteger code, NSString *description);

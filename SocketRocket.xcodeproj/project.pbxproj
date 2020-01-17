@@ -1269,6 +1269,10 @@
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				WARNING_CFLAGS = (
+					"$(inherited)",
+					"-Wunguarded-availability",
+				);
 			};
 			name = Debug;
 		};
@@ -1283,6 +1287,10 @@
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				WARNING_CFLAGS = (
+					"$(inherited)",
+					"-Wunguarded-availability",
+				);
 			};
 			name = Release;
 		};

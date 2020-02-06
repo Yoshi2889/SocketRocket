@@ -67,9 +67,17 @@ extern NSString *_Nullable SRStreamNetworkServiceTypeFromURLRequest(NSURLRequest
         case NSURLNetworkServiceTypeVoice:
             networkServiceType = NSStreamNetworkServiceTypeVoice;
             break;
+        case NSURLNetworkServiceTypeAVStreaming:
+            networkServiceType = NSStreamNetworkServiceTypeVideo;
+            break;
+        case NSURLNetworkServiceTypeResponsiveAV:
+            networkServiceType = NSStreamNetworkServiceTypeVideo;
+            break;
 #if (__MAC_OS_X_VERSION_MAX_ALLOWED >= 101200 || __IPHONE_OS_VERSION_MAX_ALLOWED >= 100000 || __TV_OS_VERSION_MAX_ALLOWED >= 100000 || __WATCH_OS_VERSION_MAX_ALLOWED >= 30000)
         case NSURLNetworkServiceTypeCallSignaling:
-            networkServiceType = NSStreamNetworkServiceTypeCallSignaling;
+            if (@available(macOS 10.12, iOS 10.0, tvOS 10.0, watchOS 3.0, *)) {
+                networkServiceType = NSStreamNetworkServiceTypeCallSignaling;
+            }
             break;
 #endif
     }

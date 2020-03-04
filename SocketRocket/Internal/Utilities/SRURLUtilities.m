@@ -47,6 +47,21 @@ extern NSString *_Nullable SRBasicAuthorizationHeaderFromURL(NSURL *url)
     return [NSString stringWithFormat:@"Basic %@", SRBase64EncodedStringFromData(data)];
 }
 
+/**
+ Evaluates to true if we're building on Xcode 11 or later, which means that
+ our Foundation build SDK is at least one of the following:
+ - iOS 13.0
+ - tvOS 13.0
+ - macOS 10.15
+ - watchOS 6.0
+ */
+#define _ARTSR_XCODE_VERSION_11_OR_LATER ( \
+    __MAC_OS_X_VERSION_MAX_ALLOWED >= 101500 || \
+    __IPHONE_OS_VERSION_MAX_ALLOWED >= 130000 || \
+    __TV_OS_VERSION_MAX_ALLOWED >= 130000 || \
+    __WATCH_OS_VERSION_MAX_ALLOWED >= 60000 \
+)
+
 extern NSString *_Nullable SRStreamNetworkServiceTypeFromURLRequest(NSURLRequest *request)
 {
     NSString *networkServiceType = nil;
@@ -67,12 +82,16 @@ extern NSString *_Nullable SRStreamNetworkServiceTypeFromURLRequest(NSURLRequest
         case NSURLNetworkServiceTypeVoice:
             networkServiceType = NSStreamNetworkServiceTypeVoice;
             break;
+
+#if _ARTSR_XCODE_VERSION_11_OR_LATER
         case NSURLNetworkServiceTypeAVStreaming:
             networkServiceType = NSStreamNetworkServiceTypeVideo;
             break;
         case NSURLNetworkServiceTypeResponsiveAV:
             networkServiceType = NSStreamNetworkServiceTypeVideo;
             break;
+#endif // _ARTSR_XCODE_VERSION_11_OR_LATER
+
 #if (__MAC_OS_X_VERSION_MAX_ALLOWED >= 101200 || __IPHONE_OS_VERSION_MAX_ALLOWED >= 100000 || __TV_OS_VERSION_MAX_ALLOWED >= 100000 || __WATCH_OS_VERSION_MAX_ALLOWED >= 30000)
         case NSURLNetworkServiceTypeCallSignaling:
             if (@available(macOS 10.12, iOS 10.0, tvOS 10.0, watchOS 3.0, *)) {

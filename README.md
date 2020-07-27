@@ -1,10 +1,5 @@
 # SocketRocket (Ably Fork)
 
-![Platforms][platforms-svg]
-[![License][license-svg]][license-link]
-[![Podspec][podspec-svg]][podspec-link]
-[![Carthage Compatible][carthage-svg]](carthage-link)
-
 A conforming WebSocket ([RFC 6455](https://tools.ietf.org/html/rfc6455>)) client library for iOS, macOS and tvOS.
 
 Test results for SocketRocket [here](http://facebook.github.io/SocketRocket/results/).
@@ -193,22 +188,3 @@ SocketRocket has been used with the following libraries:
 The Tornado one is dirt simple and works like a charm. 
 ([IPython notebook](http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html) uses it too).
 It's much easier to configure handlers and routes than in Autobahn/twisted.
-
-## Contributing
-
-We’re glad you’re interested in SocketRocket, and we’d love to see where you take it. 
-Please read our [contributing guidelines](https://github.com/facebook/SocketRocket/blob/master/CONTRIBUTING.md) prior to submitting a Pull Request.
-
- [build-status-svg]: https://img.shields.io/travis/facebook/SocketRocket/master.svg
- [build-status-link]: https://travis-ci.org/facebook/SocketRocket/branches
-
- [license-svg]: https://img.shields.io/badge/license-BSD-lightgrey.svg
- [license-link]: https://github.com/facebook/SocketRocket/blob/master/LICENSE
-
- [podspec-svg]: https://img.shields.io/cocoapods/v/SocketRocketAblyFork.svg
- [podspec-link]: https://cocoapods.org/pods/SocketRocketAblyFork
- 
- [carthage-svg]: https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat
- [carthage-link]: https://github.com/carthage/carthage
-
- [platforms-svg]: http://img.shields.io/cocoapods/p/SocketRocketAblyFork.svg?style=flat

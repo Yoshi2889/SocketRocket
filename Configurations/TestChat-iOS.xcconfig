@@ -12,7 +12,7 @@
 
 PRODUCT_NAME = TestChat
 PRODUCT_MODULE_NAME = TestChat
-PRODUCT_BUNDLE_IDENTIFIER = com.facebook.socketrocket.testchat
+PRODUCT_BUNDLE_IDENTIFIER = io.ably.socketrocket.testchat
 
 IPHONEOS_DEPLOYMENT_TARGET = 8.0
 

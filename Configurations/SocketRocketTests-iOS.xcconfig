@@ -12,7 +12,7 @@
 
 PRODUCT_NAME = SocketRocketTests-iOS
 PRODUCT_MODULE_NAME = SocketRocketTests
-PRODUCT_BUNDLE_IDENTIFIER = com.facebook.socketrocket.tests.ios
+PRODUCT_BUNDLE_IDENTIFIER = io.ably.socketrocket.tests.ios
 
 IPHONEOS_DEPLOYMENT_TARGET = 7.0
 

@@ -28,7 +28,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         thread = [[ARTSRRunLoopThread alloc] init];
-        thread.name = @"com.facebook.SocketRocket.NetworkThread";
+        thread.name = @"io.ably.socketrocket.NetworkThread";
         [thread start];
     });
     return thread;

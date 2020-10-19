@@ -11,6 +11,6 @@
 #include "Shared/Product/DynamicFramework.xcconfig"
 
 PRODUCT_NAME = SocketRocket
-PRODUCT_BUNDLE_IDENTIFIER = com.facebook.socketrocket.tvos
+PRODUCT_BUNDLE_IDENTIFIER = io.ably.socketrocket.tvos
 
 INFOPLIST_FILE = $(SRCROOT)/SocketRocket/Resources/Info.plist

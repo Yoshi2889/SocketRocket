@@ -11,7 +11,7 @@
 #include "Shared/Product/DynamicFramework.xcconfig"
 
 PRODUCT_NAME = SocketRocket
-PRODUCT_BUNDLE_IDENTIFIER = com.facebook.socketrocket.ios
+PRODUCT_BUNDLE_IDENTIFIER = io.ably.socketrocket.ios
 IPHONEOS_DEPLOYMENT_TARGET = 8.0
 
 INFOPLIST_FILE = $(SRCROOT)/SocketRocket/Resources/Info.plist

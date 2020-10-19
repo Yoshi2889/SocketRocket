@@ -38,9 +38,9 @@
 @end
 
 
-@interface TCViewController () <SRWebSocketDelegate, UITextViewDelegate>
+@interface TCViewController () <ARTSRWebSocketDelegate, UITextViewDelegate>
 {
-    SRWebSocket *_webSocket;
+    ARTSRWebSocket *_webSocket;
     NSMutableArray<TCMessage *> *_messages;
 }
 
@@ -90,7 +90,7 @@
     _webSocket.delegate = nil;
     [_webSocket close];
 
-    _webSocket = [[SRWebSocket alloc] initWithURL:[NSURL URLWithString:@"wss://echo.websocket.org"]];
+    _webSocket = [[ARTSRWebSocket alloc] initWithURL:[NSURL URLWithString:@"wss://echo.websocket.org"]];
     _webSocket.delegate = self;
 
     self.title = @"Opening Connection...";
@@ -137,16 +137,16 @@
 }
 
 ///--------------------------------------
-#pragma mark - SRWebSocketDelegate
+#pragma mark - ARTSRWebSocketDelegate
 ///--------------------------------------
 
-- (void)webSocketDidOpen:(SRWebSocket *)webSocket;
+- (void)webSocketDidOpen:(ARTSRWebSocket *)webSocket;
 {
     NSLog(@"Websocket Connected");
     self.title = @"Connected!";
 }
 
-- (void)webSocket:(SRWebSocket *)webSocket didFailWithError:(NSError *)error;
+- (void)webSocket:(ARTSRWebSocket *)webSocket didFailWithError:(NSError *)error;
 {
     NSLog(@":( Websocket Failed With Error %@", error);
 
@@ -154,20 +154,20 @@
     _webSocket = nil;
 }
 
-- (void)webSocket:(SRWebSocket *)webSocket didReceiveMessageWithString:(nonnull NSString *)string
+- (void)webSocket:(ARTSRWebSocket *)webSocket didReceiveMessageWithString:(nonnull NSString *)string
 {
     NSLog(@"Received \"%@\"", string);
     [self _addMessage:[[TCMessage alloc] initWithMessage:string incoming:YES]];
 }
 
-- (void)webSocket:(SRWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(NSString *)reason wasClean:(BOOL)wasClean;
+- (void)webSocket:(ARTSRWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(NSString *)reason wasClean:(BOOL)wasClean;
 {
     NSLog(@"WebSocket closed");
     self.title = @"Connection Closed! (see logs)";
     _webSocket = nil;
 }
 
-- (void)webSocket:(SRWebSocket *)webSocket didReceivePong:(NSData *)pongPayload;
+- (void)webSocket:(ARTSRWebSocket *)webSocket didReceivePong:(NSData *)pongPayload;
 {
     NSLog(@"WebSocket received pong");
 }

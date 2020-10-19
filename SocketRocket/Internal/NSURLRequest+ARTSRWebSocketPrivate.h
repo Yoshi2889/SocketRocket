@@ -1,7 +1,5 @@
 //
-// Copyright 2012 Square Inc.
-// Portions Copyright (c) 2016-present, Facebook, Inc.
-//
+// Copyright (c) 2016-present, Facebook, Inc.
 // All rights reserved.
 //
 // This source code is licensed under the BSD-style license found in the
@@ -9,7 +7,7 @@
 // of patent rights can be found in the PATENTS file in the same directory.
 //
 
-#import "NSRunLoop+ARTSRWebSocket.h"
 #import "NSURLRequest+ARTSRWebSocket.h"
-#import "ARTSRSecurityPolicy.h"
-#import "ARTSRWebSocket.h"
+
+// Empty function that force links the object file for the category.
+extern void import_NSURLRequest_ARTSRWebSocket(void);

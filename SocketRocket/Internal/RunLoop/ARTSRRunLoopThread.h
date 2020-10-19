@@ -9,7 +9,16 @@
 // of patent rights can be found in the PATENTS file in the same directory.
 //
 
-#import "NSRunLoop+ARTSRWebSocket.h"
-#import "NSURLRequest+ARTSRWebSocket.h"
-#import "ARTSRSecurityPolicy.h"
-#import "ARTSRWebSocket.h"
+#import <Foundation/Foundation.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface ARTSRRunLoopThread : NSThread
+
+@property (nonatomic, strong, readonly) NSRunLoop *runLoop;
+
++ (instancetype)sharedThread;
+
+@end
+
+NS_ASSUME_NONNULL_END

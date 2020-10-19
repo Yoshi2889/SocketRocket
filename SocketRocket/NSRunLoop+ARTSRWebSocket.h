@@ -9,7 +9,19 @@
 // of patent rights can be found in the PATENTS file in the same directory.
 //
 
-#import "NSRunLoop+ARTSRWebSocket.h"
-#import "NSURLRequest+ARTSRWebSocket.h"
-#import "ARTSRSecurityPolicy.h"
-#import "ARTSRWebSocket.h"
+#import <Foundation/Foundation.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface NSRunLoop (ARTSRWebSocket)
+
+/**
+ Default run loop that will be used to schedule all instances of `ARTSRWebSocket`.
+
+ @return An instance of `NSRunLoop`.
+ */
++ (NSRunLoop *)ARTSR_networkRunLoop;
+
+@end
+
+NS_ASSUME_NONNULL_END

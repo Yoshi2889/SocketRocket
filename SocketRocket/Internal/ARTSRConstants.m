@@ -7,11 +7,13 @@
 // of patent rights can be found in the PATENTS file in the same directory.
 //
 
-#include "Shared/Platform/iOS.xcconfig"
-#include "Shared/Product/DynamicFramework.xcconfig"
+#import "ARTSRConstants.h"
 
-PRODUCT_NAME = SocketRocket
-PRODUCT_BUNDLE_IDENTIFIER = io.ably.socketrocket.ios
-IPHONEOS_DEPLOYMENT_TARGET = 8.0
-
-INFOPLIST_FILE = $(SRCROOT)/SocketRocket/Resources/Info.plist
+size_t ARTSRDefaultBufferSize(void) {
+    static size_t size;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        size = getpagesize();
+    });
+    return size;
+}

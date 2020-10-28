@@ -7,11 +7,14 @@
 // of patent rights can be found in the PATENTS file in the same directory.
 //
 
-#include "Shared/Platform/iOS.xcconfig"
-#include "Shared/Product/DynamicFramework.xcconfig"
+#import <Foundation/Foundation.h>
 
-PRODUCT_NAME = SocketRocket
-PRODUCT_BUNDLE_IDENTIFIER = io.ably.socketrocket.ios
-IPHONEOS_DEPLOYMENT_TARGET = 8.0
+NS_ASSUME_NONNULL_BEGIN
 
-INFOPLIST_FILE = $(SRCROOT)/SocketRocket/Resources/Info.plist
+// Uncomment this line to enable debug logging
+//#define ARTSR_DEBUG_LOG_ENABLED
+
+extern void ARTSRErrorLog(NSString *format, ...);
+extern void ARTSRDebugLog(NSString *format, ...);
+
+NS_ASSUME_NONNULL_END

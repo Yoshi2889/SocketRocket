@@ -10,6 +10,18 @@
 //
 
 #import "NSRunLoop+ARTSRWebSocket.h"
-#import "NSURLRequest+ARTSRWebSocket.h"
-#import "ARTSRSecurityPolicy.h"
-#import "ARTSRWebSocket.h"
+#import "NSRunLoop+ARTSRWebSocketPrivate.h"
+
+#import "ARTSRRunLoopThread.h"
+
+// Required for object file to always be linked.
+void import_NSRunLoop_ARTSRWebSocket() { }
+
+@implementation NSRunLoop (ARTSRWebSocket)
+
++ (NSRunLoop *)ARTSR_networkRunLoop
+{
+    return [ARTSRRunLoopThread sharedThread].runLoop;
+}
+
+@end

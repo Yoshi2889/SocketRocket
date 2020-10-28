@@ -7,11 +7,7 @@
 // of patent rights can be found in the PATENTS file in the same directory.
 //
 
-#include "Shared/Platform/iOS.xcconfig"
-#include "Shared/Product/DynamicFramework.xcconfig"
+#import "NSRunLoop+ARTSRWebSocket.h"
 
-PRODUCT_NAME = SocketRocket
-PRODUCT_BUNDLE_IDENTIFIER = io.ably.socketrocket.ios
-IPHONEOS_DEPLOYMENT_TARGET = 8.0
-
-INFOPLIST_FILE = $(SRCROOT)/SocketRocket/Resources/Info.plist
+// Empty function that force links the object file for the category.
+extern void import_NSRunLoop_ARTSRWebSocket(void);

@@ -7,11 +7,13 @@
 // of patent rights can be found in the PATENTS file in the same directory.
 //
 
-#include "Shared/Platform/iOS.xcconfig"
-#include "Shared/Product/DynamicFramework.xcconfig"
+#import <Foundation/Foundation.h>
 
-PRODUCT_NAME = SocketRocket
-PRODUCT_BUNDLE_IDENTIFIER = io.ably.socketrocket.ios
-IPHONEOS_DEPLOYMENT_TARGET = 8.0
+/**
+ Unmask bytes using XOR via SIMD.
 
-INFOPLIST_FILE = $(SRCROOT)/SocketRocket/Resources/Info.plist
+ @param bytes    The bytes to unmask.
+ @param length   The number of bytes to unmask.
+ @param maskKey The mask to XOR with MUST be of length sizeof(uint32_t).
+ */
+void ARTSRMaskBytesSIMD(uint8_t *bytes, size_t length, uint8_t *maskKey);

@@ -49,25 +49,25 @@ There are a few options. Choose one, or just figure it out:
 
 ## API
 
-### `SRWebSocket`
+### `ARTSRWebSocket`
 
 The Web Socket.
 
 #### Note:
 
-`SRWebSocket` will retain itself between `-(void)open` and when it closes, errors, or fails.
-This is similar to how `NSURLConnection` behaves (unlike `NSURLConnection`, `SRWebSocket` won't retain the delegate).
+`ARTSRWebSocket` will retain itself between `-(void)open` and when it closes, errors, or fails.
+This is similar to how `NSURLConnection` behaves (unlike `NSURLConnection`, `ARTSRWebSocket` won't retain the delegate).
 
 #### Interface
 
 ```objective-c
-@interface SRWebSocket : NSObject
+@interface ARTSRWebSocket : NSObject
 
 // Make it with this
 - (instancetype)initWithURLRequest:(NSURLRequest *)request;
 
 // Set this before opening
-@property (nonatomic, weak) id <SRWebSocketDelegate> delegate;
+@property (nonatomic, weak) id <ARTSRWebSocketDelegate> delegate;
 
 // Open with this
 - (void)open;
@@ -84,22 +84,22 @@ This is similar to how `NSURLConnection` behaves (unlike `NSURLConnection`, `SRW
 @end
 ```
 
-### `SRWebSocketDelegate`
+### `ARTSRWebSocketDelegate`
 
 You implement this
 
 ```objective-c
-@protocol SRWebSocketDelegate <NSObject>
+@protocol ARTSRWebSocketDelegate <NSObject>
 
 @optional
 
-- (void)webSocketDidOpen:(SRWebSocket *)webSocket;
+- (void)webSocketDidOpen:(ARTSRWebSocket *)webSocket;
 
-- (void)webSocket:(SRWebSocket *)webSocket didReceiveMessageWithString:(NSString *)string;
-- (void)webSocket:(SRWebSocket *)webSocket didReceiveMessageWithData:(NSData *)data;
+- (void)webSocket:(ARTSRWebSocket *)webSocket didReceiveMessageWithString:(NSString *)string;
+- (void)webSocket:(ARTSRWebSocket *)webSocket didReceiveMessageWithData:(NSData *)data;
 
-- (void)webSocket:(SRWebSocket *)webSocket didFailWithError:(NSError *)error;
-- (void)webSocket:(SRWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(nullable NSString *)reason wasClean:(BOOL)wasClean;
+- (void)webSocket:(ARTSRWebSocket *)webSocket didFailWithError:(NSError *)error;
+- (void)webSocket:(ARTSRWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(nullable NSString *)reason wasClean:(BOOL)wasClean;
 
 @end
 ```

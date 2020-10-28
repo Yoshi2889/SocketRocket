@@ -7,11 +7,10 @@
 // of patent rights can be found in the PATENTS file in the same directory.
 //
 
-#include "Shared/Platform/iOS.xcconfig"
-#include "Shared/Product/DynamicFramework.xcconfig"
+#import <Foundation/Foundation.h>
 
-PRODUCT_NAME = SocketRocket
-PRODUCT_BUNDLE_IDENTIFIER = io.ably.socketrocket.ios
-IPHONEOS_DEPLOYMENT_TARGET = 8.0
+NS_ASSUME_NONNULL_BEGIN
 
-INFOPLIST_FILE = $(SRCROOT)/SocketRocket/Resources/Info.plist
+extern NSData *ARTSRRandomData(NSUInteger length);
+
+NS_ASSUME_NONNULL_END
